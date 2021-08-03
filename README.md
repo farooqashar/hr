@@ -18,4 +18,4 @@ git clone https://github.com/farooqashar/hr.git
 flask run
 ```
 
-Locate to `http://localhost:3000/` to see the server running.
+Locate to `http://localhost:5000/` to see the server running.
