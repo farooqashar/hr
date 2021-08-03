@@ -1,127 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    
-    <title>{%  block title %} {% endblock %} </title>
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+      integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+      integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>{% block title %} {% endblock %}</title>
 
     <style>
+      .firstRow {
+        background-color: red;
+      }
+      .App {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
 
-.firstRow {
-    background-color: red;
-}
-.App {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
+      .formInfo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
 
-.formInfo {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
+      .formInfo input {
+        width: 200px;
+        height: 50px;
+        font-size: large;
+        padding-left: 10px;
+      }
 
-.formInfo input {
-  width: 200px;
-  height: 50px;
-  font-size: large;
-  padding-left: 10px;
-}
+      a {
+        color: #00b7ff;
+      }
+      .sidebar-nav {
+        margin-top: 20px;
+        padding: 0;
+        list-style: none;
+      }
+      @keyframes mainTitle {
+        from {
+          color: red;
+        }
+        to {
+          color: white;
+        }
+        to {
+          color: blue;
+        }
+      }
+      @keyframes each {
+        from {
+          color: purple;
+        }
+        to {
+          color: blue;
+        }
+        to {
+          color: goldenrod;
+        }
+      }
+      @keyframes subt {
+        from {
+          color: red;
+        }
+        to {
+          color: yellow;
+        }
+        to {
+          color: green;
+        }
+      }
+      @keyframes bkgrdc {
+        from {
+          background-color: lightcyan;
+        }
+        to {
+          background-color: darkslateblue;
+        }
+        to {
+          background-color: white;
+        }
+      }
 
-a {
-  color: #00b7ff;
-}
-.sidebar-nav {
-  margin-top: 20px;
-  padding: 0;
-  list-style: none;
-}
-@keyframes mainTitle {
-  from {
-    color: red;
-  }
-  to {
-    color: white;
-  }
-  to {
-    color: blue;
-  }
-}
-@keyframes each {
-  from {
-    color: purple;
-  }
-  to {
-    color: blue;
-  }
-  to {
-    color: goldenrod;
-  }
-}
-@keyframes subt {
-  from {
-    color: red;
-  }
-  to {
-    color: yellow;
-  }
-  to {
-    color: green;
-  }
-}
-@keyframes bkgrdc {
-  from {
-    background-color: lightcyan;
-  }
-  to {
-    background-color: darkslateblue;
-  }
-  to {
-    background-color: white;
-  }
-}
+      h1 {
+        color: crimson;
+        text-align: center;
+        animation-name: mainTitle;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
 
-h1 {
-  color: crimson;
-  text-align: center;
-  animation-name: mainTitle;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+      .eachl {
+        color: cornflowerblue;
+        animation-name: each;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
+      .subttt {
+        color: aqua;
+        animation-name: subt;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+        text-align: center;
+      }
 
-.eachl {
-  color: cornflowerblue;
-  animation-name: each;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
-.subttt {
-  color: aqua;
-  animation-name: subt;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  text-align: center;
-}
-
-.ssm {
-  color: aqua;
-  font-size: medium;
-  animation-name: subt;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-}
+      .ssm {
+        color: aqua;
+        font-size: medium;
+        animation-name: subt;
+        animation-duration: 3s;
+        animation-iteration-count: infinite;
+      }
     </style>
-</head>
-<body>
-
+  </head>
+  <body>
     {% block body %} {% endblock %}
-
-</body>
-
+  </body>
 </html>
